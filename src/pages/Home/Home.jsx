@@ -1,7 +1,9 @@
 import { useState, useEffect } from 'react';
 import { getTrendingMovies } from 'services/moviesAPI';
 import { ThreeCircles } from 'react-loader-spinner';
+
 import MovieList from 'components/MovieList/MovieList';
+
 import { Container, Title, Loader } from './Home.styled';
 
 const Home = () => {
