@@ -2,14 +2,16 @@ import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
 export const StyledNavLink = styled(NavLink)`
-  color: #000000;
+  color: #4f4141;
+  text-decoration: none;
+
   &.active {
     color: #8635a4;
   }
-  text-decoration: none;
 `;
 
 export const Header = styled.header`
+  background-color: aqua;
   box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.2);
 `;
 
