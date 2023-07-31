@@ -1,1 +1,1 @@
-{"version":3,"file":"static/js/278.2bfe1cb0.chunk.js","mappings":"6IAIA,UAJe,SAATA,IACJ,OAAOA,CACR,C","sources":["pages/Movies/Movies.jsx"],"sourcesContent":["const Movies = () => {\n  return Movies;\n};\n\nexport default Movies;\n"],"names":["Movies"],"sourceRoot":""}
+{"version":3,"file":"static/js/278.2bfe1cb0.chunk.js","mappings":"6IAIA,UAJe,SAATA,IACJ,OAAOA,CACT,C","sources":["pages/Movies/Movies.jsx"],"sourcesContent":["const Movies = () => {\n  return Movies;\n};\n\nexport default Movies;\n"],"names":["Movies"],"sourceRoot":""}
