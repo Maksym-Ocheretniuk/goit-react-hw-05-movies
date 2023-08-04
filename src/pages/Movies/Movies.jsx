@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
-import { searchMovies } from 'services/searchMoviesAPI';
+import { searchMovies } from 'services/moviesAPI';
 
 import MovieList from 'components/MovieList/MovieList';
 
@@ -66,7 +66,9 @@ const Movies = () => {
         <SearchInput type="text" name="search" defaultValue={query} />
         <SearchBtn type="submit">Search</SearchBtn>
       </SearchForm>
+
       <MovieList movies={searchMovie} />
+
       {loading && (
         <Loader>
           <ThreeCircles
