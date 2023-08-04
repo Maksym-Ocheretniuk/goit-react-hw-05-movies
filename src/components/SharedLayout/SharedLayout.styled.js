@@ -24,5 +24,5 @@ export const Navigation = styled.nav`
 `;
 
 export const Main = styled.main`
-  width: 1440px;
+  max-width: 1440px;
 `;

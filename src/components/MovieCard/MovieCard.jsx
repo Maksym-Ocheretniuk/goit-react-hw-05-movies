@@ -17,8 +17,10 @@ const MovieCard = ({ movieDetails }) => {
   const getGenres = () => {
     return genres?.map(({ name }) => name).join(' ');
   };
+  
   const defaultImg =
-    'https://play-lh.googleusercontent.com/c_RFVsWfu89ctt7B6smzohv5UBVietoRji26alQNBlOJP6if4LzJAkL3Bw-2MxvuUKk';
+    'https://img.freepik.com/free-vector/modern-coming-soon-poster-with-stay-tuned-message_1017-39310.jpg?w=2000';
+
   const userScore = Math.round((vote_average * 100) / 10);
   const [loading, setLoading] = useState(true);
 

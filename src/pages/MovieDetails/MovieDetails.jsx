@@ -10,12 +10,9 @@ import {
   Container,
   StyledLinkBtn,
   Title,
-} from './MovieDetails.styled';
-import {
-  List,
-  ListItem,
   StyledLink,
-} from 'components/MovieList/MovieList.styled';
+} from './MovieDetails.styled';
+import { List, ListItem } from 'components/MovieList/MovieList.styled';
 
 const MovieDetails = () => {
   const [movieDetails, setMovieDetails] = useState({});

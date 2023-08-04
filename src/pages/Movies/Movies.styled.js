@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   padding: 30px 20px 20px 30px;
+  max-width: max-content;
 `;
 
 export const SearchForm = styled.form``;

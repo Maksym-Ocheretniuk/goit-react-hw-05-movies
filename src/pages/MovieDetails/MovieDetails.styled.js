@@ -21,7 +21,15 @@ export const StyledLinkBtn = styled(Link)`
   border-radius: 5px;
 
   color: #000000;
+  background-color: #eeeee4;
   cursor: pointer;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    background-color: #f5f59f;
+  }
 `;
 
 export const AddInfo = styled.div`
@@ -32,4 +40,26 @@ export const AddInfo = styled.div`
 export const Title = styled.h2`
   font-size: 20px;
   font-weight: 500;
+`;
+
+export const StyledLink = styled(Link)`
+  font-size: 14px;
+  text-decoration: none;
+  color: #000000;
+
+  padding: 6px 10px;
+
+  border: 1px solid #808080;
+  border-radius: 5px;
+
+  color: #000000;
+  background-color: #eeeee4;
+  cursor: pointer;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    background-color: #f5f59f;
+  }
 `;
