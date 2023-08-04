@@ -1,3 +1,6 @@
+import { useState } from 'react';
+import PropTypes from 'prop-types';
+
 import {
   Container,
   DescMovie,
@@ -17,6 +20,11 @@ const MovieCard = ({ movieDetails }) => {
   const defaultImg =
     'https://play-lh.googleusercontent.com/c_RFVsWfu89ctt7B6smzohv5UBVietoRji26alQNBlOJP6if4LzJAkL3Bw-2MxvuUKk';
   const userScore = Math.round((vote_average * 100) / 10);
+  const [loading, setLoading] = useState(true);
+
+  const handleLoadImage = () => {
+    setLoading(false);
+  };
 
   return (
     movieDetails && (
@@ -27,9 +35,12 @@ const MovieCard = ({ movieDetails }) => {
               ? `https://image.tmdb.org/t/p/w500/${poster_path}`
               : defaultImg
           }
-          width={500}
+          width={300}
           alt="poster"
+          onLoad={handleLoadImage}
+          style={{ display: loading ? 'none' : 'block' }}
         />
+
         <DescMovie>
           <Title>{title || name}</Title>
           <DescText> User Score: {userScore}</DescText>
@@ -41,6 +52,16 @@ const MovieCard = ({ movieDetails }) => {
       </Container>
     )
   );
+};
+
+MovieCard.propTypes = {
+  movieDetails: PropTypes.shape({
+    poster_path: PropTypes.string,
+    title: PropTypes.string,
+    vote_average: PropTypes.number,
+    overview: PropTypes.string,
+    genres: PropTypes.array,
+  }),
 };
 
 export default MovieCard;

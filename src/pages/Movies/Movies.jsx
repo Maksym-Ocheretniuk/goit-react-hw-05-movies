@@ -4,15 +4,14 @@ import { searchMovies } from 'services/moviesAPI';
 
 import MovieList from 'components/MovieList/MovieList';
 
-import { ThreeCircles } from 'react-loader-spinner';
+import Loader from 'components/Loader/Loader';
 
 import {
   Container,
   SearchBtn,
   SearchForm,
   SearchInput,
-  Loader,
-} from './Movies.styled';
+  } from './Movies.styled';
 
 const Movies = () => {
   const [searchMovie, setSearchMovie] = useState([]);
@@ -69,22 +68,7 @@ const Movies = () => {
 
       <MovieList movies={searchMovie} />
 
-      {loading && (
-        <Loader>
-          <ThreeCircles
-            height="100"
-            width="100"
-            color="#4fa94d"
-            wrapperStyle={{}}
-            wrapperClass=""
-            visible={true}
-            ariaLabel="three-circles-rotating"
-            outerCircleColor=""
-            innerCircleColor=""
-            middleCircleColor=""
-          />
-        </Loader>
-      )}
+      {loading && Loader}
     </Container>
   );
 };

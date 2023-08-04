@@ -1,7 +1,7 @@
-import MovieCard from 'components/MovieCard/MovieCard';
 import { useState, useEffect, useRef, Suspense } from 'react';
 import { Outlet, useLocation, useParams } from 'react-router-dom';
 
+import MovieCard from 'components/MovieCard/MovieCard';
 import { getMovieDetails } from 'services/moviesAPI';
 import Loader from 'components/Loader/Loader';
 
