@@ -19,18 +19,18 @@ const MovieList = ({ movies }) => {
       <List>
         {movies?.map(({ id, title, name, poster_path }) => (
           <ListItem key={id}>
-            <Image
-              src={
-                poster_path
-                  ? `https://image.tmdb.org/t/p/w500/${poster_path}`
-                  : defaultImg
-              }
-              width={150}
-              alt="poster"
-              onLoad={handleLoadImage}
-              style={{ display: loading ? 'none' : 'block' }}
-            />
             <StyledLink to={`/movies/${id}`} state={{ from: location }}>
+              <Image
+                src={
+                  poster_path
+                    ? `https://image.tmdb.org/t/p/w500/${poster_path}`
+                    : defaultImg
+                }
+                width={150}
+                alt="poster"
+                onLoad={handleLoadImage}
+                style={{ display: loading ? 'none' : 'block' }}
+              />
               {title ?? name}
             </StyledLink>
           </ListItem>
